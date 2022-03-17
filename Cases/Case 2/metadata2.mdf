@@ -1,0 +1,29 @@
+Start Program Meta-Data Code:
+sys start
+app start, 0
+dev in, video signal, 63
+cpu process, 6
+dev out, video signal, 70
+dev out, sound signal, 45
+mem allocate, 1000, 2000
+dev out, hard drive, 27
+dev out, hard drive, 18
+mem allocate, 3000, 3000
+dev in, hard drive, 21
+dev in, keyboard, 80
+dev out, hard drive, 21
+dev in, usb, 14
+dev in, sound signal, 25
+dev in, usb, 20
+cpu process, 9
+dev out, serial, 24
+dev out, video signal, 70
+dev out, hard drive, 18
+dev in, hard drive, 30
+dev in, hard drive, 18
+cpu process, 9
+cpu process, 7
+app end
+sys end
+End Program Meta-Data Code.
+

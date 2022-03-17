@@ -1,0 +1,56 @@
+Simulator Run
+-------------
+
+  0.000000, OS: Simulator start
+  0.000006, OS: Process 0 set to READY state from NEW state
+  0.000024, OS: Process 0 selected with 11590 ms remaining
+  0.000028, OS: Process 0 set from READY to RUNNING
+
+  0.000031, Process: 0, video signal input operation start
+  1.260069, Process: 0, video signal input operation end
+  1.260106, Process: 0, cpu process operation start
+  1.320122, Process: 0, cpu process operation end
+  1.320163, Process: 0, video signal output operation start
+  2.720178, Process: 0, video signal output operation end
+  2.720222, Process: 0, sound signal output operation start
+  3.620235, Process: 0, sound signal output operation end
+  3.620277, Process: 0, mem allocate request (1000, 2000)
+--------------------------------------------------
+After memory initialization
+0 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+--------------------------------------------------
+After allocate success
+0 [ Used, P#: 0, 1000-2999 ] 1999
+2000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+  3.620335, Process: 0, successful mem allocate request
+  3.620340, Process: 0, hard drive output operation start
+  4.160387, Process: 0, hard drive output operation end
+  4.160430, Process: 0, hard drive output operation start
+  4.520443, Process: 0, hard drive output operation end
+  4.520484, Process: 0, mem allocate request (2000, 3000)
+--------------------------------------------------
+After allocate overlap failure
+0 [ Used, P#: 0, 1000-2999 ] 1999
+2000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+  4.520505, Process: 0, failed mem allocate request
+
+  4.520510, OS: Segmentation fault, Process 0 ended
+--------------------------------------------------
+After clear one process success
+0 [ Open, P#: x, 0-0 ] 1999
+2000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+  4.520530, OS: Process 0 set to EXIT
+  4.520534, OS: System stop
+--------------------------------------------------
+After clear all process success
+No memory configured
+--------------------------------------------------
+  4.520568, OS: Simulation end
+
+Simulator Program End.
+
+

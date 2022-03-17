@@ -1,0 +1,8 @@
+First attempt to acquire memory but the logical requests overlap
+- causes seg fault
+
+- diagnostic memory map is provided in this display,
+  should not be in normal simulation
+
+
+

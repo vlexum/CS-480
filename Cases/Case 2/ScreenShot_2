@@ -1,0 +1,87 @@
+Simulator Program
+=================
+
+Simulator Run
+-------------
+
+  0.000000, OS: Simulator start
+  0.000010, OS: Process 0 set to READY state from NEW state
+  0.000015, OS: Process 0 selected with 11590 ms remaining
+  0.000019, OS: Process 0 set from READY to RUNNING
+
+  0.000024, Process: 0, video signal input operation start
+  1.260037, Process: 0, video signal input operation end
+  1.260078, Process: 0, cpu process operation start
+  1.320093, Process: 0, cpu process operation end
+  1.320132, Process: 0, video signal output operation start
+  2.720144, Process: 0, video signal output operation end
+  2.720190, Process: 0, sound signal output operation start
+  3.620206, Process: 0, sound signal output operation end
+  3.620246, Process: 0, mem allocate request (1000, 2000)
+--------------------------------------------------
+After memory initialization
+0 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+--------------------------------------------------
+After allocate success
+0 [ Used, P#: 0, 1000-2999 ] 1999
+2000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+  3.620277, Process: 0, successful mem allocate request
+  3.620283, Process: 0, hard drive output operation start
+  4.160293, Process: 0, hard drive output operation end
+  4.160341, Process: 0, hard drive output operation start
+  4.520356, Process: 0, hard drive output operation end
+  4.520407, Process: 0, mem allocate request (3000, 3000)
+--------------------------------------------------
+After allocate success
+0 [ Used, P#: 0, 1000-2999 ] 1999
+2000 [ Used, P#: 0, 3000-5999 ] 4999
+5000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+  4.520470, Process: 0, successful mem allocate request
+  4.520478, Process: 0, hard drive input operation start
+  4.940490, Process: 0, hard drive input operation end
+  4.940537, Process: 0, keyboard input operation start
+  6.540552, Process: 0, keyboard input operation end
+  6.540598, Process: 0, hard drive output operation start
+  6.960611, Process: 0, hard drive output operation end
+  6.960653, Process: 0, usb input operation start
+  7.240673, Process: 0, usb input operation end
+  7.240780, Process: 0, sound signal input operation start
+  7.740801, Process: 0, sound signal input operation end
+  7.740841, Process: 0, usb input operation start
+  8.140852, Process: 0, usb input operation end
+  8.140890, Process: 0, cpu process operation start
+  8.230922, Process: 0, cpu process operation end
+  8.230967, Process: 0, serial output operation start
+  8.710983, Process: 0, serial output operation end
+  8.711109, Process: 0, video signal output operation start
+ 10.111164, Process: 0, video signal output operation end
+ 10.111204, Process: 0, hard drive output operation start
+ 10.471217, Process: 0, hard drive output operation end
+ 10.471263, Process: 0, hard drive input operation start
+ 11.071282, Process: 0, hard drive input operation end
+ 11.071335, Process: 0, hard drive input operation start
+ 11.431349, Process: 0, hard drive input operation end
+ 11.431394, Process: 0, cpu process operation start
+ 11.521414, Process: 0, cpu process operation end
+ 11.521459, Process: 0, cpu process operation start
+ 11.591478, Process: 0, cpu process operation end
+
+ 11.591522, OS: Process 0 ended
+--------------------------------------------------
+After clear one process success
+0 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 11.591543, OS: Process 0 set to EXIT
+ 11.591548, OS: System stop
+--------------------------------------------------
+After clear all process success
+No memory configured
+--------------------------------------------------
+ 11.591561, OS: Simulation end
+
+Simulator Program End.
+
+

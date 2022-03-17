@@ -1,0 +1,13 @@
+- full preemptive operation with five processes
+
+- several attempts to allocate
+  -- some fail due to not enough memory
+  -- one fails due to overlap request
+
+- a few attempts to access
+  -- most succeed but one or more fail
+
+- this shows the diagnostic memory map,
+  but this should not be shown in simulation
+
+

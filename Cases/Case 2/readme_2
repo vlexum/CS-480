@@ -1,0 +1,10 @@
+Second attempt uses correct base and offset values so there is no overlap
+- system works correctly, no seg fault
+- at end, process zero cleans up its memory
+  - note that when the memory is cleaned up,
+    adjacent empty memory locations are combined
+
+- diagnostic memory map is provided,
+  should not be in normal simulation
+
+

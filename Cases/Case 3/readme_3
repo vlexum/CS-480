@@ -1,0 +1,7 @@
+- five processes, all with requests
+- process 2 asks for overlapping memory and is seg faulted
+
+- has diagnostic memory map shown,
+  not in normal simulation
+
+

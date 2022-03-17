@@ -1,0 +1,240 @@
+Simulator Program
+=================
+
+Simulator Run
+-------------
+
+  0.000000, OS: Simulator start
+  0.000014, OS: Process 0 set to READY state from NEW state
+  0.000022, OS: Process 1 set to READY state from NEW state
+  0.000045, OS: Process 2 set to READY state from NEW state
+  0.000050, OS: Process 3 set to READY state from NEW state
+  0.000054, OS: Process 4 set to READY state from NEW state
+  0.000059, OS: Process 0 selected with 7240 ms remaining
+  0.000062, OS: Process 0 set from READY to RUNNING
+
+  0.000067, Process: 0, video signal input operation start
+  1.260080, Process: 0, video signal input operation end
+  1.260134, Process: 0, cpu process operation start
+  1.320157, Process: 0, cpu process operation end
+  1.320206, Process: 0, video signal output operation start
+  2.720221, Process: 0, video signal output operation end
+  2.720271, Process: 0, sound signal output operation start
+  3.620286, Process: 0, sound signal output operation end
+  3.620329, Process: 0, mem allocate request (1000, 2000)
+--------------------------------------------------
+After memory initialization
+0 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+--------------------------------------------------
+After allocate success
+0 [ Used, P#: 0, 1000-2999 ] 1999
+2000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+  3.620402, Process: 0, successful mem allocate request
+  3.620410, Process: 0, hard drive output operation start
+  4.160440, Process: 0, hard drive output operation end
+  4.160488, Process: 0, hard drive output operation start
+  4.520504, Process: 0, hard drive output operation end
+  4.520552, Process: 0, hard drive input operation start
+  4.940568, Process: 0, hard drive input operation end
+  4.940611, Process: 0, keyboard input operation start
+  6.540622, Process: 0, keyboard input operation end
+  6.540663, Process: 0, hard drive output operation start
+  6.960683, Process: 0, hard drive output operation end
+  6.960723, Process: 0, usb input operation start
+  7.240736, Process: 0, usb input operation end
+
+  7.240780, OS: Process 0 ended
+--------------------------------------------------
+After clear one process success
+0 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+  7.240797, OS: Process 0 set to EXIT
+  7.240801, OS: Process 1 selected with 4350 ms remaining
+  7.240804, OS: Process 1 set from READY to RUNNING
+
+  7.240830, Process: 1, sound signal input operation start
+  7.740849, Process: 1, sound signal input operation end
+  7.740896, Process: 1, usb input operation start
+  8.140911, Process: 1, usb input operation end
+  8.140959, Process: 1, cpu process operation start
+  8.230996, Process: 1, cpu process operation end
+  8.231047, Process: 1, mem allocate request (1000, 3000)
+--------------------------------------------------
+After allocate success
+0 [ Used, P#: 1, 1000-3999 ] 2999
+3000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+  8.231098, Process: 1, successful mem allocate request
+  8.231106, Process: 1, serial output operation start
+  8.711137, Process: 1, serial output operation end
+  8.711186, Process: 1, video signal output operation start
+ 10.111201, Process: 1, video signal output operation end
+ 10.111252, Process: 1, hard drive output operation start
+ 10.471267, Process: 1, hard drive output operation end
+ 10.471331, Process: 1, hard drive input operation start
+ 11.071346, Process: 1, hard drive input operation end
+ 11.071387, Process: 1, hard drive input operation start
+ 11.431401, Process: 1, hard drive input operation end
+ 11.431445, Process: 1, mem allocate request (4000, 2000)
+--------------------------------------------------
+After allocate success
+0 [ Used, P#: 1, 1000-3999 ] 2999
+3000 [ Used, P#: 1, 4000-5999 ] 4999
+5000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 11.431471, Process: 1, successful mem allocate request
+ 11.431477, Process: 1, cpu process operation start
+ 11.521496, Process: 1, cpu process operation end
+ 11.521537, Process: 1, cpu process operation start
+ 11.591554, Process: 1, cpu process operation end
+
+ 11.591593, OS: Process 1 ended
+--------------------------------------------------
+After clear one process success
+0 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 11.591609, OS: Process 1 set to EXIT
+ 11.591613, OS: Process 2 selected with 5220 ms remaining
+ 11.591617, OS: Process 2 set from READY to RUNNING
+
+ 11.591638, Process: 2, video signal input operation start
+ 12.291652, Process: 2, video signal input operation end
+ 12.291694, Process: 2, cpu process operation start
+ 12.381716, Process: 2, cpu process operation end
+ 12.381764, Process: 2, usb input operation start
+ 12.781779, Process: 2, usb input operation end
+ 12.781827, Process: 2, cpu process operation start
+ 12.851849, Process: 2, cpu process operation end
+ 12.851901, Process: 2, video signal input operation start
+ 13.971937, Process: 2, video signal input operation end
+ 13.971983, Process: 2, mem allocate request (2000, 2000)
+--------------------------------------------------
+After allocate success
+0 [ Used, P#: 2, 2000-3999 ] 1999
+2000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 13.972029, Process: 2, successful mem allocate request
+ 13.972054, Process: 2, serial output operation start
+ 14.532066, Process: 2, serial output operation end
+ 14.532129, Process: 2, serial output operation start
+ 15.172146, Process: 2, serial output operation end
+ 15.172192, Process: 2, usb input operation start
+ 15.572206, Process: 2, usb input operation end
+ 15.572249, Process: 2, monitor output operation start
+ 16.572263, Process: 2, monitor output operation end
+ 16.572308, Process: 2, mem allocate request (1000, 2000)
+--------------------------------------------------
+After allocate overlap failure
+0 [ Used, P#: 2, 2000-3999 ] 1999
+2000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 16.572353, Process: 2, failed mem allocate request
+
+ 16.572377, OS: Segmentation fault, Process 2 ended
+--------------------------------------------------
+After clear one process success
+0 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 16.572397, OS: Process 2 set to EXIT
+ 16.572403, OS: Process 3 selected with 4410 ms remaining
+ 16.572408, OS: Process 3 set from READY to RUNNING
+
+ 16.572414, Process: 3, video signal input operation start
+ 17.412448, Process: 3, video signal input operation end
+ 17.412490, Process: 3, cpu process operation start
+ 17.482757, Process: 3, cpu process operation end
+ 17.482810, Process: 3, usb input operation start
+ 17.762827, Process: 3, usb input operation end
+ 17.762869, Process: 3, cpu process operation start
+ 17.832946, Process: 3, cpu process operation end
+ 17.832991, Process: 3, cpu process operation start
+ 17.923007, Process: 3, cpu process operation end
+ 17.923046, Process: 3, serial input operation start
+ 18.643059, Process: 3, serial input operation end
+ 18.643102, Process: 3, mem allocate request (3000, 2000)
+--------------------------------------------------
+After allocate success
+0 [ Used, P#: 3, 3000-4999 ] 1999
+2000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 18.643125, Process: 3, successful mem allocate request
+ 18.643131, Process: 3, cpu process operation start
+ 18.703148, Process: 3, cpu process operation end
+ 18.703193, Process: 3, serial output operation start
+ 19.503206, Process: 3, serial output operation end
+ 19.503314, Process: 3, cpu process operation start
+ 19.583341, Process: 3, cpu process operation end
+ 19.583387, Process: 3, mem allocate request (6000, 2000)
+--------------------------------------------------
+After allocate success
+0 [ Used, P#: 3, 3000-4999 ] 1999
+2000 [ Used, P#: 3, 6000-7999 ] 3999
+4000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 19.583436, Process: 3, successful mem allocate request
+ 19.583461, Process: 3, video signal output operation start
+ 20.983477, Process: 3, video signal output operation end
+
+ 20.983545, OS: Process 3 ended
+--------------------------------------------------
+After clear one process success
+0 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 20.983563, OS: Process 3 set to EXIT
+ 20.983568, OS: Process 4 selected with 9360 ms remaining
+ 20.983572, OS: Process 4 set from READY to RUNNING
+
+ 20.983594, Process: 4, video signal input operation start
+ 21.963609, Process: 4, video signal input operation end
+ 21.963654, Process: 4, hard drive input operation start
+ 22.563668, Process: 4, hard drive input operation end
+ 22.563713, Process: 4, video signal output operation start
+ 23.963726, Process: 4, video signal output operation end
+ 23.963767, Process: 4, mem allocate request (1000, 6000)
+--------------------------------------------------
+After allocate success
+0 [ Used, P#: 4, 1000-6999 ] 5999
+6000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 23.963784, Process: 4, successful mem allocate request
+ 23.963789, Process: 4, hard drive input operation start
+ 24.563801, Process: 4, hard drive input operation end
+ 24.563851, Process: 4, hard drive input operation start
+ 25.103864, Process: 4, hard drive input operation end
+ 25.103909, Process: 4, usb input operation start
+ 25.423923, Process: 4, usb input operation end
+ 25.423975, Process: 4, mem allocate request (8000, 2000)
+--------------------------------------------------
+After allocate success
+0 [ Used, P#: 4, 1000-6999 ] 5999
+6000 [ Used, P#: 4, 8000-9999 ] 7999
+8000 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 25.424035, Process: 4, successful mem allocate request
+ 25.424065, Process: 4, video signal output operation start
+ 26.824086, Process: 4, video signal output operation end
+ 26.824159, Process: 4, video signal output operation start
+ 27.944175, Process: 4, video signal output operation end
+ 27.944239, Process: 4, monitor output operation start
+ 29.144254, Process: 4, monitor output operation end
+ 29.144297, Process: 4, keyboard input operation start
+ 30.344310, Process: 4, keyboard input operation end
+
+ 30.344357, OS: Process 4 ended
+--------------------------------------------------
+After clear one process success
+0 [ Open, P#: x, 0-0 ] 11099
+--------------------------------------------------
+ 30.344379, OS: Process 4 set to EXIT
+ 30.344384, OS: System stop
+--------------------------------------------------
+After clear all process success
+No memory configured
+--------------------------------------------------
+ 30.344398, OS: Simulation end
+
+Simulator Program End.
+
+
