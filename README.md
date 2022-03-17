@@ -1,8 +1,8 @@
 ﻿
 
-CS 480 SIMULATOR PROJECT
+# CS 480 SIMULATOR PROJECT
 
-INTRODUCTION
+## INTRODUCTION
 
 This assignment has been developed to provide students with a quality experience
 
@@ -24,7 +24,7 @@ as long as the entire project, including grading, is completed on or before 19
 
 November 2020 (course term end).
 
-Development requirements
+### Development requirements
 
 • The simulator must be programmed and written completely in the C
 
@@ -60,7 +60,7 @@ document as well is in the project rubric.
 
 
 
-CALENDAR/SCHEDULE OF ASSIGNMENTS
+### CALENDAR/SCHEDULE OF ASSIGNMENTS
 
 ~~Mon, 10 Jan: Sim01 assigned in Week 1 folder~~
 
@@ -176,7 +176,7 @@ to keep it set to private except for those moments in your career where you
 
 wish to show it off. At that point, it is your call.
 
-GENERAL PROGRAMMING AND DEVELOPMENT EXPECTATIONS
+### GENERAL PROGRAMMING AND DEVELOPMENT EXPECTATIONS
 
 Specific rubrics will be provided for grading each program. However, the following
 
