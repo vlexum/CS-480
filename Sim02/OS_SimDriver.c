@@ -1,7 +1,8 @@
 // header files
-#include <stdbool.h>
+#include "OS_SimDriver.h"
 
-int int main(int argc, char **argv)
+
+int main(int argc, char **argv)
    {
     // Initialize program
       // initialize variables
@@ -16,7 +17,7 @@ int int main(int argc, char **argv)
     int fileStrLen, fileStrSubLoc;
     char fileName[ STD_STR_LEN ];
     char errorMessage[ MAX_STR_LEN ];
-    ConfigDataType *configDataPointer = NULL;
+    ConfigDataType *configDataPtr = NULL;
     OpCodeType *metaDataPtr = NULL;
 
       // show title
@@ -39,7 +40,7 @@ int int main(int argc, char **argv)
     fileName[0] = NULL_CHAR;
 
     // loop across args (starting at 1) and program run flag
-    while ( programRunFlag == false && argIndex < argc )
+    while ( !programRunFlag && argIndex < argc )
        {
         // find lengths to verify file name
          // function: getStringLength, findSubString
@@ -56,27 +57,27 @@ int int main(int argc, char **argv)
            configDisplayFlag = true;
           }
 
-      // otherwise, check for -dm (display metadata flag)
-         // function: compareString
-      else if ( compareString( argv[ argIndex ], "-dm" ) == STR_EQ )
+         // otherwise, check for -dm (display metadata flag)
+           // function: compareString
+        else if ( compareString( argv[ argIndex ], "-dm" ) == STR_EQ )
          {
          // set config upload flag
           configUploadFlag = true;
          // set meta data display flag
           mdDisplayFlag = true;
          }
-      //otherwise, check for -rs (run simulator)
+        //otherwise, check for -rs (run simulator)
          // function: compareString
-      if ( compareString( argv[ argIndex ], "-rs" ) == STR_EQ )
+        if ( compareString( argv[ argIndex ], "-rs" ) == STR_EQ )
          {
          // set config upload flag
           configUploadFlag = true;
          // set run simulator flag
           runSimFlag = true;
          }
-      // otherwise, check for file name, ending in .config
-      // must be last flag
-      else if ( fileStrSubLoc != SUBSTRING_NOT_FOUND && fileStrSubLoc ==       fileStrLen - lastFourLetters )
+       // otherwise, check for file name, ending in .config
+       // must be last flag
+       else if ( fileStrSubLoc != SUBSTRING_NOT_FOUND && fileStrSubLoc ==       fileStrLen - lastFourLetters )
          {
          // set file name to variable
             // function: copyString
@@ -85,13 +86,13 @@ int int main(int argc, char **argv)
          // set program run flag
           programRunFlag = true;
          }
-      // update arg index
+       // update arg index
        argIndex++;
 
-      //end arg loop
+       //end arg loop
       }
       // check for command line failure
-      if ( programRunFlag == false && infoFlag == false )
+      if ( !programRunFlag && !infoFlag )
          {
          // show error message, end program
             // fucntion: printf
@@ -99,17 +100,17 @@ int int main(int argc, char **argv)
 
          // provide command line info to user
             // function: showProgramFormat
-          showProgramFormat():
+          showProgramFormat();
          }
       // check for program run and config upload flag
-      if ( programRunFlag == true && configUploadFlag == true )
+      if ( programRunFlag && configUploadFlag )
          {
          //upload config file, check for success
             // function: getStringLength, getConfigData
-          if ( getStringLength( fileName ) > 0 && getConfigData( fileName, &configDataPtr, errorMessage) == true )
+          if ( getStringLength( fileName ) > 0 && getConfigData( fileName, &configDataPtr, errorMessage) )
             {
              // check config display flag
-             if ( configDisplayFlag == true )
+             if ( configDisplayFlag )
                 {
                 // display config data
                    // function: displayConfigData
@@ -127,35 +128,35 @@ int int main(int argc, char **argv)
             }
          }
          // check for program run flag
-         if ( programRunFlag == true && ( mdDisplayFlag == true || runSimFlag == true ) )
+         if ( programRunFlag && ( mdDisplayFlag || runSimFlag ) )
             {
             // upload meta data file, check for success
                // function: getMetaData
-             if ( getMetaData( configDataPtr->metaDataFileName, &metaDataPtr, errorMessage ) == true )
+             if ( getMetaData( configDataPtr->metaDataFileName, &metaDataPtr, errorMessage ) )
                {
                //check meta data display flag
-                if ( mdDisplayFlag == true )
+                if ( mdDisplayFlag )
                    {
                    //display meta data
                       // function: displayMetaData
                     displayMetaData( metaDataPtr );
                    }
                 // check run simulator flag
-                if ( runSimFlag == true )
+                if ( runSimFlag )
                    {
                    // run simulator
                       // function: runSim
                     runSim( configDataPtr, metaDataPtr );
-
                    }
-               // otherwise, assume meta data upload failure
-               else
-                  {
-                  // show error message, end program
-                     // function: printf
-                   printf( "\nMetadata Upload Error: %s, program aborted\n", errorMessage );
-                  }
             }
+          // otherwise, assume meta data upload failure
+          else
+             {
+             // show error message, end program
+                // function: printf
+             printf( "\nMetadata Upload Error: %s, program aborted\n", errorMessage );
+             }
+         }
       // clean up config data as needed
          // function: clearConfigData
       configDataPtr = clearConfigData( configDataPtr );
@@ -171,6 +172,7 @@ int int main(int argc, char **argv)
     return 0;
    }
 
+
 /*
 name: showProgramFormat
 process : displays command line argument requirements for this showProgramFormat
@@ -185,6 +187,10 @@ void showProgramFormat()
    {
     //print out command linme argument instructions
       // function: printf
-    print("\n\n\n")
-
+    printf( "Program Format:\n" );
+    printf( "     sim_0x [-dc] [-dm] [-rs] <config file name>\n" );
+    printf( "     -dc [optional] displays configuration data\n" );
+    printf( "     -dm [optional] displays meta data\n" );
+    printf( "     -rs [optional] runs simulator\n" );
+    printf( "     config file name is required\n" );
    }

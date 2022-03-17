@@ -1,7 +1,10 @@
 // header files
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "StringUtils.h"
+
+const int NO_ERR = 1;
+const int STR_EQ = 0;
+const int SUBSTRING_NOT_FOUND = -1;
+const char NON_PRINTABLE_CHAR  = (char) 127;
 
 /*
 Name: compareString
@@ -219,7 +222,7 @@ bool getStringConstrained ( FILE *inStream, bool clearLeadingNonPrintable, bool 
     intChar = fgetc( inStream );
 
     // loop to clear non printable or space (if indicated)
-    while ( ( intChar != EOF ) && ( clearLeadingNonPrintable && intChar <= (int) SPACE ) || ( clearLeadingSpace && intChar == (int) SPACE ) )
+    while ( ( ( intChar != EOF ) && ( clearLeadingNonPrintable && intChar <= (int) SPACE ) ) || ( clearLeadingSpace && intChar == (int) SPACE ) )
       {
        // get next character
           // function: fgetc
@@ -257,7 +260,7 @@ bool getStringConstrained ( FILE *inStream, bool clearLeadingNonPrintable, bool 
 
        // get next character as integer
           // function: fgetc
-       intChar = fgetc( intStream );
+       intChar = fgetc( inStream );
 
       }
     // end loop
@@ -420,7 +423,7 @@ void setStrToLowerCase ( char *destStr, const char *sourceStr )
 
       // get source string length
          // function: getStringLength
-      int sourceStrLen = getStringLength( sourceStrLen );
+      int sourceStrLen = getStringLength( sourceStr );
 
       // create temporary string pointer
       char *tempStr;
