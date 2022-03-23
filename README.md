@@ -1,8 +1,8 @@
 ﻿
 
-CS 480 SIMULATOR PROJECT
+# CS 480 SIMULATOR PROJECT
 
-INTRODUCTION
+## INTRODUCTION
 
 This assignment has been developed to provide students with a quality experience
 
@@ -24,7 +24,7 @@ as long as the entire project, including grading, is completed on or before 19
 
 November 2020 (course term end).
 
-Development requirements
+### Development requirements
 
 • The simulator must be programmed and written completely in the C
 
@@ -60,7 +60,7 @@ document as well is in the project rubric.
 
 
 
-CALENDAR/SCHEDULE OF ASSIGNMENTS
+### CALENDAR/SCHEDULE OF ASSIGNMENTS
 
 ~~Mon, 10 Jan: Sim01 assigned in Week 1 folder~~
 
@@ -176,7 +176,7 @@ to keep it set to private except for those moments in your career where you
 
 wish to show it off. At that point, it is your call.
 
-GENERAL PROGRAMMING AND DEVELOPMENT EXPECTATIONS
+### GENERAL PROGRAMMING AND DEVELOPMENT EXPECTATIONS
 
 Specific rubrics will be provided for grading each program. However, the following
 
@@ -392,7 +392,7 @@ each grading component
 
 • Dates are found previously in this document.
 
-THE PROGRAM CONFIGURATION DATA
+#### THE PROGRAM CONFIGURATION DATA
 
 All programs must be able to input and store the contents of the file shown next.
 
@@ -522,7 +522,7 @@ went wrong. Remember that the function must communicate the error to the
 
 calling function; error messages must all be printed from the main function.
 
-THE PROGRAM META-DATA
+#### THE PROGRAM META-DATA
 
 **The program meta-data components are as follows:**
 
@@ -642,7 +642,7 @@ End Program Meta-Data Code.
 
 
 
-GENERAL INFORMATION
+#### GENERAL INFORMATION
 
 **The cycle times are applied as specified here:**
 
@@ -662,7 +662,7 @@ represent real time; if the operations take 10 seconds, the simulator must take 
 
 seconds.
 
-SUPPORTING PROGRAM CODE
+#### SUPPORTING PROGRAM CODE
 
 **Timing the simulator operations:**
 
@@ -704,7 +704,7 @@ learning.
 
 
 
-RUNNING THE SIMULATOR
+#### RUNNING THE SIMULATOR
 
 The simulator will input a configuration file that is accepted from the command
 
@@ -734,9 +734,9 @@ Also note that differing configuration files will be used for various testing pu
 
 
 
-Phase I (Sim01) – Input Data Management
+### Phase I (Sim01) – Input Data Management
 
-DESCRIPTION
+#### DESCRIPTION
 
 This phase – which is a review of data structures, implemented in C – will require
 
@@ -776,7 +776,7 @@ simulated operations, so it is acceptable for that function, along with its
 
 subordinate functions, to display or store output.
 
-MAIN FILE/MAIN METHOD/DRIVER
+#### MAIN FILE/MAIN METHOD/DRIVER
 
 One file will contain the main file for the simulator program. As mentioned
 
@@ -798,7 +798,7 @@ function will not change throughout this project.
 
 
 
-CONFIGURATION FILE
+#### CONFIGURATION FILE
 
 The configuration file must be uploaded to the system as called by the main
 
@@ -808,7 +808,7 @@ other arguments including specified limits for the configuration items must stop
 
 the program and report the issue as specifically as possible.
 
-META-DATA FILE
+#### META-DATA FILE
 
 The meta-data file must also be uploaded to the system as called by the main
 
@@ -826,7 +826,7 @@ The meta-data acquisition component must upload ***any*** meta-data file of ***a
 
 must work correctly on any correctly formed meta-data file.
 
-ASSIGNMENT
+#### ASSIGNMENT
 
 As specified in the description, students are to develop modules that, when called,
 
@@ -1162,11 +1162,11 @@ should be correctly displayed.
 
 
 
-Phase 2 (Sim02) - Simple Multiple Program Batch
+### Phase 2 (Sim02) - Simple Multiple Program Batch
 
-Simulator
+#### Simulator
 
-DESCRIPTION
+##### DESCRIPTION
 
 This phase will begin your real simulation work by processing several programs
 
@@ -1308,11 +1308,11 @@ functions in this file will result in a significant loss of credit.
 
 
 
-Phase 3 (Sim03) – Batch Program Simulator with
+### Phase 3 (Sim03) – Batch Program Simulator with
 
-Memory Management and CPU Scheduling
+##### Memory Management and CPU Scheduling
 
-DESCRIPTION
+###### DESCRIPTION
 
 This phase will offer you the opportunity to learn about memory management by
 
@@ -1460,7 +1460,7 @@ Phase 4 (Sim04) – Multiprogramming Simulator
 
 (tentative – to be updated at assignment time)
 
-DESCRIPTION
+### DESCRIPTION
 
 This phase will mark the culmination of how a multiprogramming operating system
 
