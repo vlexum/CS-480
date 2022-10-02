@@ -1,6 +1,4 @@
-﻿
-
-# CS 480 SIMULATOR PROJECT
+# Simulator Project from CS480
 
 ## INTRODUCTION
 
