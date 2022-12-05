@@ -1,4 +1,4 @@
-# Simulator Project from CS480
+# Simulator Project from NAU OS Course
 
 #### THE PROGRAM CONFIGURATION DATA
 
