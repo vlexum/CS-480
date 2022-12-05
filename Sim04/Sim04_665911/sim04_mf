@@ -1,0 +1,9 @@
+CC = gcc
+DEBUG = -g
+LFLAGS = -Wall -std=c99 -pedantic $(DEBUG)
+
+buildSim01 : OS_SimDriver.c metadataops.c configops.c StringUtils.c simulator.c simtimer.c
+	$(CC) $(LFLAGS) OS_SimDriver.c metadataops.c configops.c StringUtils.c simulator.c simtimer.c -o Sim04
+
+clean:
+	\rm Sim04
