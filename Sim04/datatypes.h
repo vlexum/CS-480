@@ -2,8 +2,6 @@
 #ifndef DATATYPES_H
 #define DATATYPES_H
 
-// Data Types Used In Sim03
-
 // config data structure
 typedef struct ConfigDataType
    {
